@@ -1,14 +1,6 @@
-USE [master]
-GO
-/****** Object:  StoredProcedure [dbo].[sp_dbAnalytix]    Script Date: 29/05/2018 13:34:11 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-
 CREATE PROCEDURE [dbo].[sp_dbAnalytix] --USE master   EXEC sp_MS_marksystemobject sp_dbAnalytix
 	@OrderBy INT = 1
-    ,@DoExactCounts BIT  = 0
+    	,@DoExactCounts BIT  = 0
 	,@TableNameLike NVARCHAR(100) = '%'
 with recompile
 AS
@@ -21,10 +13,9 @@ BEGIN
          tableName NVARCHAR(MAX)
         ,Rc INT
         ,[Size] INT
-		,Cc INT
-		,SF NVARCHAR(MAX)
+	,Cc INT
+	,SF NVARCHAR(MAX)
         ,RN INT
-		
     )
 
     DECLARE @DropCMD NVARCHAR(MAX)
