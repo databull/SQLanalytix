@@ -1,6 +1,6 @@
 CREATE PROCEDURE [dbo].[sp_dbAnalytix] --USE master   EXEC sp_MS_marksystemobject sp_dbAnalytix
 	@OrderBy INT = 1
-    	,@DoExactCounts BIT  = 0
+	,@DoExactCounts BIT  = 0
 	,@TableNameLike NVARCHAR(100) = '%'
 WITH RECOMPILE
 AS
@@ -10,12 +10,12 @@ BEGIN
 
     CREATE TABLE #MigTableSizeCountTables
     (
-         tableName NVARCHAR(MAX)
-        ,Rc INT
-        ,[Size] INT
+	tableName NVARCHAR(MAX)
+	,Rc INT
+	,[Size] INT
 	,Cc INT
 	,SF NVARCHAR(MAX)
-        ,RN INT
+	,RN INT
     )
 
     DECLARE @DropCMD NVARCHAR(MAX)
