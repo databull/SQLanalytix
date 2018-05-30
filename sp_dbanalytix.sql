@@ -10,7 +10,7 @@ CREATE PROCEDURE [dbo].[sp_dbAnalytix] --USE master   EXEC sp_MS_marksystemobjec
 	@OrderBy INT = 1
     ,@DoExactCounts BIT  = 0
 	,@TableNameLike NVARCHAR(100) = '%'
-    
+with recompile
 AS
 BEGIN
 
